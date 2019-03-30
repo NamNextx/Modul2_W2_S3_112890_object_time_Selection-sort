@@ -2,9 +2,23 @@ public class StopWach {
     private double startTime;
     private double endTime;
 
-    public StopWach(double startTime, double endTime) {
+    private static StopWach instanceStopwach;
+
+    private StopWach(){
+
+    }
+    private StopWach(double startTime, double endTime) {
         this.startTime = startTime;
         this.endTime = endTime;
+    }
+
+    public static StopWach getInstance(double startTime, double endTime) {
+        if (instanceStopwach==null){
+            synchronized (StopWach.class){
+                instanceStopwach=new StopWach(startTime,endTime);
+            }
+        }
+        return instanceStopwach;
     }
 
     public double getStartTime() {

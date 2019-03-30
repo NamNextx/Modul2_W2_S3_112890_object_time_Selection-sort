@@ -5,13 +5,12 @@ import java.util.Random;
 
 public class SelectionSort{
 
-    private static double selectionSort(double arr[]) {
-        StopWach currentTime = new StopWach(System.currentTimeMillis(), System.currentTimeMillis());
+    public static void selectionSort(double arr[]) {
 
         int length = arr.length;
         int count = 0;
         double tg;
-        currentTime.startTime();
+        //currentTime.startTime();
         for (int i = 1; i < length; i++) {
             if (arr[count] < arr[i]) {
                 tg = arr[i];
@@ -19,21 +18,11 @@ public class SelectionSort{
                 arr[count] = tg;
             }
         }
-        currentTime.endTime();
-        return currentTime.getElapsedTime();
+       // currentTime.endTime();
+       // return currentTime.getElapsedTime();
     }
 
-    private static void setArray(double array[]) {
-        Random rd = new Random();
-        int length = array.length;
-        for (int i = 0; i < length; i++) {
-            array[i] = rd.nextInt(99);
-        }
-    }
 
-    private static void display(double time) {
-        System.out.println("Time for Selection sort for 100000 = " + time + " Millis");
-    }
 
 }
 
