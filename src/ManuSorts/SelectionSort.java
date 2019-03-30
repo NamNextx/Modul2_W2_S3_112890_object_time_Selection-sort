@@ -1,7 +1,9 @@
+package ManuSorts;
+
 import java.util.Date;
 import java.util.Random;
 
-public class SelectionSort {
+public class SelectionSort{
 
     private static double selectionSort(double arr[]) {
         StopWach currentTime = new StopWach(System.currentTimeMillis(), System.currentTimeMillis());
@@ -32,16 +34,6 @@ public class SelectionSort {
     private static void display(double time) {
         System.out.println("Time for Selection sort for 100000 = " + time + " Millis");
     }
-
-    public static void main(String[] args) {
-        double myArray[] = new double[100000];
-        setArray(myArray);
-        double time;
-        time = selectionSort(myArray);
-
-        display(time);
-    }
-
 
 }
 
