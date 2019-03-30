@@ -1,7 +1,4 @@
-package ManuSorts;
-
-import java.util.Date;
-import java.util.Random;
+package GroupSorts;
 
 public class SelectionSort{
 

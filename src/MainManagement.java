@@ -1,6 +1,5 @@
-import InterfaceArray.IInOut;
 import InterfaceArray.IOClass;
-import ManuSorts.SelectionSort;
+import GroupSorts.SelectionSort;
 
 import java.lang.Exception;
 
